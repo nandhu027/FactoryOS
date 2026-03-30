@@ -1,0 +1,51 @@
+import { Router } from "express";
+
+import attendanceRoutes from "../modules/attendance/attendance.routes.js";
+import auditRoutes from "../modules/audit/audit.routes.js";
+import authRoutes from "../modules/auth/auth.routes.js";
+import contractorRoutes from "../modules/contractors/contractor.routes.js";
+import dashboardRoutes from "../modules/dashboard/dashboard.routes.js";
+import dispatchRoutes from "../modules/dispatch/dispatch.routes.js";
+import expenseRoutes from "../modules/expenses/expense.routes.js";
+import jobbookRoutes from "../modules/jobbook/jobbook.routes.js";
+import machinesRoutes from "../modules/machines/machines.routes.js";
+import mastersRoutes from "./master.routes.js";
+import partiesRoutes from "../modules/parties/parties.routes.js";
+import paymentRoutes from "../modules/payments/payment.routes.js";
+import productionRoutes from "../modules/production/production.routes.js";
+import productRoutes from "../modules/products/products.routes.js";
+import rawMaterialRoutes from "../modules/rawMaterial/rawMaterial.routes.js";
+import rolesRoutes from "../modules/roles/roles.routes.js";
+import searchRoutes from "../modules/search/search.routes.js";
+import semiFinishedRoutes from "../modules/semiFinished/semiFinished.routes.js";
+import settlementRoutes from "../modules/settlement/settlement.routes.js";
+import staffRoutes from "../modules/staff/staff.routes.js";
+import stockRoutes from "../modules/stockEngine/stock.routes.js";
+import usersRoutes from "../modules/users/users.routes.js";
+
+const router = Router();
+
+router.use("/attendance", attendanceRoutes);
+router.use("/audit-logs", auditRoutes);
+router.use("/auth", authRoutes);
+router.use("/contractor", contractorRoutes);
+router.use("/dashboard", dashboardRoutes);
+router.use("/dispatch", dispatchRoutes);
+router.use("/expenses", expenseRoutes);
+router.use("/jobbook", jobbookRoutes);
+router.use("/machines", machinesRoutes);
+router.use("/masters", mastersRoutes);
+router.use("/parties", partiesRoutes);
+router.use("/payments", paymentRoutes);
+router.use("/production", productionRoutes);
+router.use("/products", productRoutes);
+router.use("/raw-materials", rawMaterialRoutes);
+router.use("/roles", rolesRoutes);
+router.use("/search", searchRoutes);
+router.use("/semi-finished", semiFinishedRoutes);
+router.use("/settlements", settlementRoutes);
+router.use("/staff", staffRoutes);
+router.use("/stock", stockRoutes);
+router.use("/users", usersRoutes);
+
+export default router;
